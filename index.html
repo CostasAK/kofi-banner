@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/zkr4osd.css" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <style>
+      #bound {
+        --portrait-width: 25%;
+        margin: auto;
+        box-sizing: border-box;
+        width: 1280px;
+        height: 400px;
+        text-align: center;
+        background: grey;
+        display: grid;
+        grid-template-columns:
+          calc((100% - var(--portrait-width)) / 2) var(--portrait-width)
+          calc((100% - var(--portrait-width)) / 2);
+        font-size: 4.4rem;
+        font-family: arial, sans-serif;
+      }
+      #bound > * {
+        height: 100%;
+      }
+      #bound > *:not(:first-child) {
+        clip-path: polygon(
+          calc((400px - (1280px * 0.25)) / 2) 0,
+          100% 0,
+          100% 100%,
+          0 100%
+        );
+      }
+      #ffxiv {
+        background: #1b1b1b;
+        color: #e5e5e5;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: safe center;
+        flex-flow: column;
+      }
+      #portrait {
+        object-fit: cover;
+        object-position: center;
+        place-self: center;
+      }
+      #d2 {
+        background: #12171c;
+        color: #f2f2f2;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-items: safe center;
+        flex-flow: column;
+        text-transform: uppercase;
+      }
+    </style>
+    <div id="bound">
+      <div id="ffxiv">
+        <img src="./000047_hr1.png" />
+        <span id="title">FFXIV<br />Buddy</span>
+      </div>
+      <img id="portrait" src="./avatar.jpg" />
+      <div id="d2">
+        <img src="./clovis_ck.svg" width="90" />
+        <span id="title">Destiny 2 Buddy</span>
+      </div>
+    </div>
+  </body>
+</html>

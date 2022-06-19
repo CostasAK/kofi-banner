@@ -6,13 +6,16 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/zkr4osd.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,700"
+    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <style>
-      #bound {
-        --portrait-width: 25%;
-        margin: auto;
+      #banner {
+        margin: 1rem auto;
         box-sizing: border-box;
         width: 1280px;
         height: 400px;
@@ -20,21 +23,69 @@
         background: grey;
         display: grid;
         grid-template-columns:
-          calc((100% - var(--portrait-width)) / 2) var(--portrait-width)
-          calc((100% - var(--portrait-width)) / 2);
+          33% 21%
+          46%;
         font-size: 4.4rem;
         font-family: arial, sans-serif;
       }
-      #bound > * {
+      #banner > * {
         height: 100%;
       }
-      #bound > *:not(:first-child) {
+      #banner > *:not(:first-child) {
         clip-path: polygon(
-          calc((400px - (1280px * 0.25)) / 2) 0,
+          calc((400px - (1280px * 0.21)) / 2) 0,
           100% 0,
           100% 100%,
           0 100%
         );
+      }
+      #banner > *:first-child {
+        padding-inline: calc(3 * 14px);
+      }
+      #banner > *:last-child {
+        padding-inline: calc(3 * 14px);
+      }
+      #preview {
+        margin: 1rem auto;
+        box-sizing: border-box;
+        width: 1280px;
+        height: 640px;
+        text-align: center;
+        background: #1b1b1b;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        font-size: 4.4rem;
+        font-family: arial, sans-serif;
+      }
+      #preview > * {
+        height: 100%;
+      }
+      #preview > *:not(:first-child) {
+        clip-path: polygon(
+          calc((400px - (1280px * 0.21)) / 2) 0,
+          100% 0,
+          100% 100%,
+          0 100%
+        );
+      }
+      #preview > * {
+        padding-inline: calc(3 * 14px);
+      }
+      #support {
+        grid-column: 1 / span 2;
+        background: #434b57;
+        color: #fff;
+        font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
+        font-weight: 700;
+        letter-spacing: math.div(0.15em, -14);
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #support > img {
+        width: 120px;
+        height: 120px;
       }
       #ffxiv {
         background: #1b1b1b;
@@ -64,12 +115,25 @@
         text-transform: uppercase;
       }
     </style>
-    <div id="bound">
+    <div id="banner">
       <div id="ffxiv">
         <img src="./000047_hr1.png" />
-        <span id="title">FFXIV<br />Buddy</span>
+        <span id="title">FFXIV Buddy</span>
       </div>
       <img id="portrait" src="./avatar.jpg" />
+      <div id="d2">
+        <img src="./clovis_ck.svg" width="90" />
+        <span id="title">Destiny 2 Buddy</span>
+      </div>
+    </div>
+    <div id="preview">
+      <div id="support">
+        <img src="./ko-fi.png" />Support my projects of Ko-fi
+      </div>
+      <div id="ffxiv">
+        <img src="./000047_hr1.png" />
+        <span id="title">FFXIV Buddy</span>
+      </div>
       <div id="d2">
         <img src="./clovis_ck.svg" width="90" />
         <span id="title">Destiny 2 Buddy</span>

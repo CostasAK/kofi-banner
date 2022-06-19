@@ -17,7 +17,7 @@
       #banner {
         margin: 1rem auto;
         box-sizing: border-box;
-        width: 1280px;
+        width: 1200px;
         height: 400px;
         text-align: center;
         background: grey;
@@ -33,17 +33,17 @@
       }
       #banner > *:not(:first-child) {
         clip-path: polygon(
-          calc((400px - (1280px * 0.21)) / 2) 0,
+          calc((400px - (1280px * 0.2)) / 2) 0,
           100% 0,
           100% 100%,
           0 100%
         );
       }
       #banner > *:first-child {
-        padding-inline: calc(3 * 14px);
+        padding-inline-end: 40px;
       }
       #banner > *:last-child {
-        padding-inline: calc(3 * 14px);
+        padding-inline-start: 40px;
       }
       #preview {
         margin: 1rem auto;
